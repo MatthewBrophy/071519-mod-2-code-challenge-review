@@ -1,0 +1,16 @@
+<%if @brew.errors.any?%>
+  <%@brew.errors.full_messages.each do |message|%>
+    <p><%=message%></p>
+  <%end%>
+<%end%>
+<%=form_for @brew do |b|%>
+  <%=b.label :blend_name%>
+  <%=b.text_field :blend_name%><br>
+  <%=b.label :origin%>
+  <%=b.text_field :origin%><br>
+  <%=b.label :notes%>
+  <%=b.text_field :notes%><br>
+  <%=b.label :strength%>
+  <%=b.number_field :strength%><br>
+  <%=b.submit%>
+<%end%>

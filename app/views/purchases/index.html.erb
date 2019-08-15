@@ -1,0 +1,6 @@
+<h1>Brew Crew's Booze</h1>
+<ul>
+  <%@purchases.each do |purchase|%>
+    <li><%=link_to purchase.id, purchase_path(purchase)%></li>
+  <%end%>
+</ul>

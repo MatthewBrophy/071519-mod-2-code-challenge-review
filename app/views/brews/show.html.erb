@@ -1,0 +1,13 @@
+<h1>Blend Name: <%=@brew.blend_name%></h1>
+<h3>Origin: <%=@brew.origin%></h3>
+<h3>Notes: <%=@brew.notes%></h3>
+<h3>Strength: <%=@brew.strength%></h3>
+<h3>Customers Who Purchased:</h3>
+<br>
+<ul>
+  <%@brew.purchases.each do |purchase|%>
+    <li><%=purchase.customer_name%></li>
+  <%end%>
+</ul>
+<%= button_to "delete", @brew, :method => :delete %><br>
+<%= link_to "update", edit_brew_path(@brew)%>

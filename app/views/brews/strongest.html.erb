@@ -1,0 +1,6 @@
+<h1>Brew Crew's Strongest Booze!</h1>
+<ul>
+  <%@brews.each do |beer|%>
+    <li><%=link_to beer.blend_name, brew_path(beer)%></li>
+  <%end%>
+</ul>

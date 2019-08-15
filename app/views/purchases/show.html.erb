@@ -1,0 +1,3 @@
+<h1>Customer Name: <%=@purchase.customer_name%></h1>
+<h3>Price: <%=@purchase.price%></h3>
+<h3>Beer: <%=link_to @purchase.brew.blend_name, brew_path(@purchase.brew)%></h3>

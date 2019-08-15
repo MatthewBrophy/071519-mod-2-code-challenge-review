@@ -1,0 +1,8 @@
+<%=form_for @purchase do |b|%>
+  <%=b.label :customer_name%>
+  <%=b.text_field :customer_name%><br>
+  <%=b.label :price%>
+  <%=b.float_field :price%><br>
+  <%=b.collection_select :brew_id, Brew.all, :id, :blend_name%>
+  <%=b.submit%>
+<%end%>
